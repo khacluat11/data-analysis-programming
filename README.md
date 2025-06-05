@@ -1,39 +1,41 @@
-# LẬP TRÌNH PHÂN TÍCH DỮ LIỆU
+# DATA ANALYSIS PROGRAMMING
 
-## Mục tiêu dự án
+## Project Objectives
 
-Trong project này, tôi sẽ phân tích dữ liệu liên quan đến tỷ lệ tử vong sớm tại các Quận ở Hoa Kỳ. Cụ thể, dự án bao gồm:
+In this project, I will analyze data related to premature mortality rates in counties in the United States. Specifically, the project includes:
 
-1. **Phân tích và trực quan hóa dữ liệu**: Trình bày bảng số liệu và tạo các biểu đồ trực quan về tỷ lệ số năm mất sớm (YPLL Rate) theo từng Quận bằng cách sử dụng thư viện pandas và matplotlib.
-  
-2. **Xây dựng mô hình hồi quy**: Từ bộ dữ liệu `additional-measures.csv`, tôi sẽ sử dụng các chỉ số khác để dự đoán tỷ lệ tử vong sớm (YPLL Rate). Đây là bước quan trọng trong việc hiểu rõ mối quan hệ giữa các chỉ số y tế và tỷ lệ tử vong.
+1. **Data Analysis and Visualization**: Presenting data tables and creating visual charts of the YPLL Rate by county using the pandas and matplotlib libraries.
 
-## Phần 1:
+2. **Building a regression model**: From the `additional-measures.csv` dataset, I will use other indicators to predict the premature mortality rate (YPLL Rate). This is an important step in understanding the relationship between health indicators and mortality rates.
 
-Sử dụng bộ dữ liệu `ypll.csv` chứa tỷ lệ số năm mất sớm trong 100000 người ở mỗi Quận tại Hoa Kỳ với các thuộc tính:
+## Part 1:
 
-- FIPS: mã quận
-- State: bang
-- County: quận
-- Unreliable: đánh dấu dòng dữ liệu có thể bị thu nhập sai
-- YPLL Rate: tỷ lệ tử vong sớm trên 100000
+Using the `ypll.csv` dataset containing the rate of premature death per 100,000 people in each county in the United States with the following attributes:
 
-Bộ dữ liệu YPLL được sử dụng để đo tỷ lệ tử vong sớm (trước 75 tuổi). Mỗi dòng dữ liệu được đo trong 100000 người (một trăm nghìn người) và tính tổng số năm họ mất sớm hơn trước 75 tuổi. Ví dụ, một người mất năm 73 tuổi thì xem như họ mất sớm 2 năm. Nếu họ mất năm 77 tuổi thì số năm mất sớm là 0 năm.
+- FIPS: county code
+- State: state
+- County: county
+- Unreliable: flags a row of data that may be incorrectly captured
+- YPLL Rate: premature death rate per 100,000
 
-## Phần 2: 
+The YPLL dataset is used to measure premature death (before age 75). Each row of data is measured in 100,000 people (one hundred thousand people) and the total number of years they died before age 75. For example, a person who died at age 73 is considered to have died 2 years prematurely. If they died at age 77, the number of years they died prematurely is 0 years.
 
-Sử dụng bộ dữ liệu `additional-measures.csv`
+## Part 2:
 
-Bộ dữ liệu này chứa tất cả các chỉ số khác ở mỗi Quận. Nhiệm vụ của bạn là xây dựng một mô hình dự đoán tỷ lệ tử vong sớm YPLL Rate dựa vào các chỉ số khác.
+Using the `additional-measures.csv` dataset
 
-## Đặc điểm nổi bật
+This dataset contains all the other metrics in each County. Your task is to build a model to predict the YPLL Rate premature mortality based on the other metrics.
 
-- **Sử dụng pandas** để xử lý, phân tích dữ liệu nhanh chóng và dễ hiểu.
-- **Trực quan dữ liệu với matplotlib**: Tạo ra các biểu đồ sống động và trực quan, giúp dễ dàng phân tích và rút ra kết luận.
-- **Dự đoán bằng mô hình học máy**: Xây dựng mô hình dự đoán tỷ lệ tử vong dựa trên các biến độc lập từ bộ dữ liệu khác.
+## Highlights
 
-## Giá trị mang lại
+- **Use pandas** to process and analyze data quickly and easily.
 
-Dự án không chỉ là một bài tập phân tích dữ liệu thông thường, mà nó còn mở ra một góc nhìn sâu sắc về sức khỏe cộng đồng, giúp hiểu rõ hơn về sự chênh lệch trong tử vong sớm giữa các Quận tại Hoa Kỳ. Với mô hình dự đoán, tôi kỳ vọng có thể tạo ra một công cụ hữu ích để dự đoán tỷ lệ tử vong dựa trên các yếu tố sức khỏe quan trọng.
+- **Data visualization with matplotlib**: Create vivid and intuitive charts, making it easy to analyze and draw conclusions.
 
-Mời các bạn xem và tham khảo source code của tôi. Hy vọng rằng những gì bạn học được từ dự án này sẽ giúp ích cho bạn trong những dự án phân tích dữ liệu khác, nó sẽ mang lại cho bạn những ý tưởng hữu ích, cũng như trong sự nghiệp phát triển kỹ năng lập trình của mình.
+- **Prediction using machine learning models**: Build a model to predict mortality based on independent variables from other datasets.
+
+## Value brought
+
+The project is not just a regular data analysis exercise, but it also opens up a deep perspective on public health, helping to better understand the disparities in premature mortality between counties in the United States. With the predictive model, I hope to create a useful tool to predict mortality based on important health factors.
+
+Please see and refer to my source code. Hopefully what you learn from this project will help you in other data analysis projects, it will give you useful ideas, as well as in your career development of programming skills.
